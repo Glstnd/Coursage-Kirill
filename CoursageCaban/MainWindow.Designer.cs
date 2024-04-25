@@ -43,19 +43,20 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.R_textBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.d_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.n_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.h_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,7 +67,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.groupBoxData.SuspendLayout();
@@ -199,24 +201,71 @@
             // groupBoxData
             // 
             this.groupBoxData.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBoxData.Controls.Add(this.comboBox3);
+            this.groupBoxData.Controls.Add(this.comboBox2);
             this.groupBoxData.Controls.Add(this.comboBox1);
             this.groupBoxData.Controls.Add(this.label8);
-            this.groupBoxData.Controls.Add(this.textBox5);
+            this.groupBoxData.Controls.Add(this.R_textBox);
             this.groupBoxData.Controls.Add(this.label10);
             this.groupBoxData.Controls.Add(this.label4);
             this.groupBoxData.Controls.Add(this.label6);
             this.groupBoxData.Controls.Add(this.label5);
-            this.groupBoxData.Controls.Add(this.textBox3);
+            this.groupBoxData.Controls.Add(this.d_textBox);
             this.groupBoxData.Controls.Add(this.label3);
-            this.groupBoxData.Controls.Add(this.textBox2);
+            this.groupBoxData.Controls.Add(this.n_textBox);
             this.groupBoxData.Controls.Add(this.label2);
-            this.groupBoxData.Controls.Add(this.textBox1);
+            this.groupBoxData.Controls.Add(this.h_textBox);
             this.groupBoxData.Controls.Add(this.label1);
             this.groupBoxData.Location = new System.Drawing.Point(27, 111);
             this.groupBoxData.Name = "groupBoxData";
             this.groupBoxData.Size = new System.Drawing.Size(623, 273);
             this.groupBoxData.TabIndex = 2;
             this.groupBoxData.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.comboBox1.Items.AddRange(new object[] {
+            "км.",
+            "м.",
+            "дм.",
+            "см.",
+            "мм."});
+            this.comboBox1.Location = new System.Drawing.Point(528, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(89, 45);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.Text = "м.";
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label8.Location = new System.Drawing.Point(528, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 46);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "кг";
+            // 
+            // R_textBox
+            // 
+            this.R_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.R_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.R_textBox.Location = new System.Drawing.Point(436, 210);
+            this.R_textBox.Name = "R_textBox";
+            this.R_textBox.Size = new System.Drawing.Size(86, 41);
+            this.R_textBox.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label10.Location = new System.Drawing.Point(17, 207);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(420, 46);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Радиус лестницы R =";
             // 
             // label4
             // 
@@ -234,9 +283,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label6.Location = new System.Drawing.Point(528, 88);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 46);
+            this.label6.Size = new System.Drawing.Size(81, 46);
             this.label6.TabIndex = 9;
-            this.label6.Text = "кг";
+            this.label6.Text = "шт.";
             // 
             // label5
             // 
@@ -248,14 +297,14 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "м";
             // 
-            // textBox3
+            // d_textBox
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox3.Location = new System.Drawing.Point(436, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(86, 41);
-            this.textBox3.TabIndex = 5;
+            this.d_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.d_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.d_textBox.Location = new System.Drawing.Point(436, 152);
+            this.d_textBox.Name = "d_textBox";
+            this.d_textBox.Size = new System.Drawing.Size(86, 41);
+            this.d_textBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -267,15 +316,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Диаметр столба d =";
             // 
-            // textBox2
+            // n_textBox
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox2.Location = new System.Drawing.Point(436, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(86, 41);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "5";
+            this.n_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.n_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.n_textBox.Location = new System.Drawing.Point(436, 92);
+            this.n_textBox.Name = "n_textBox";
+            this.n_textBox.Size = new System.Drawing.Size(86, 41);
+            this.n_textBox.TabIndex = 3;
+            this.n_textBox.Text = "5";
             // 
             // label2
             // 
@@ -287,15 +336,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "К-во ступеней n =";
             // 
-            // textBox1
+            // h_textBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox1.Location = new System.Drawing.Point(436, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 41);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "2";
+            this.h_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.h_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.h_textBox.Location = new System.Drawing.Point(436, 29);
+            this.h_textBox.Name = "h_textBox";
+            this.h_textBox.Size = new System.Drawing.Size(86, 41);
+            this.h_textBox.TabIndex = 1;
+            this.h_textBox.Text = "2";
             // 
             // label1
             // 
@@ -317,35 +366,6 @@
             this.calculateButton.Text = "Вычислить";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label8.Location = new System.Drawing.Point(528, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 46);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "кг";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox5.Location = new System.Drawing.Point(436, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(86, 41);
-            this.textBox5.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label10.Location = new System.Drawing.Point(17, 207);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(420, 46);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Радиус лестницы R =";
             // 
             // groupBox1
             // 
@@ -452,20 +472,35 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Ширина a =";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.comboBox2.Items.AddRange(new object[] {
             "км.",
             "м.",
             "дм.",
             "см.",
             "мм."});
-            this.comboBox1.Location = new System.Drawing.Point(528, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(89, 45);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "м.";
+            this.comboBox2.Location = new System.Drawing.Point(528, 150);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(89, 45);
+            this.comboBox2.TabIndex = 18;
+            this.comboBox2.Text = "м.";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.comboBox3.Items.AddRange(new object[] {
+            "км.",
+            "м.",
+            "дм.",
+            "см.",
+            "мм."});
+            this.comboBox3.Location = new System.Drawing.Point(528, 206);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(89, 45);
+            this.comboBox3.TabIndex = 19;
+            this.comboBox3.Text = "м.";
             // 
             // MainWindow
             // 
@@ -510,18 +545,18 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.GroupBox groupBoxData;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox h_textBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox d_textBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox n_textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox R_textBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
@@ -533,6 +568,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

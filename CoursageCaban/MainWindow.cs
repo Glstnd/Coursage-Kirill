@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace CoursageCaban
         private Form closeForm;
         private Calculate calculate;
         private Office officeapp;
+
+        private double h = 2, d = 0.1, R = 2;
 
         public MainWindow(Form closeForm)
         {
@@ -37,6 +40,13 @@ namespace CoursageCaban
         private void calculateButton_Click(object sender, EventArgs e)
         {
             calculate.CalculateData();
+
+            using (OpenGL game = new OpenGL(800, 600, "LearnOpenTK"))
+            {
+                //Run takes a double, which is how many frames per second it should strive to reach.
+                //You can leave that out and it'll just update as fast as the hardware will allow it.
+                game.Run(60.0);
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -52,6 +62,28 @@ namespace CoursageCaban
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             closeForm.Close();
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.Text)
+            {
+                case "км.":
+                {
+                    h_textBox.Text = $"{h / 1000}";
+                    break;
+                }
+                case "м.":
+                {
+                    h_textBox.Text = $"{h}";
+                    break;
+                }
+                case "дм.":
+                {
+                    h_textBox.Text = $"{h * 10}";
+                    break;
+                }
+            }
         }
     }
 }
